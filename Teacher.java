@@ -8,6 +8,7 @@ public class Teacher {
 	Student student1 = new Student();
 	ArrayList<Student> studentList = new ArrayList<Student>();
 
+	
 	public String getName() {
 		return name;
 	}

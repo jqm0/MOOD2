@@ -6,7 +6,8 @@ public class Course {
 	private String name;
 	private String type;
 	Mark markCourse = new Mark();
-	
+
+
 	public String getName() {
 		return name;
 	}

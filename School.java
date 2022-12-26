@@ -4,6 +4,7 @@ public class School {
 	private int id;
 	Department department1 = new Department();
 	
+	
 	public String getName() {
 		return name;
 	}

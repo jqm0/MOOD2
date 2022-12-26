@@ -1,23 +1,31 @@
 package firstTask;
 
 public class Mark {
-	private int markMath ;
-	private int physics ;
+	private double midTerm ;
+	private double finalMark ;
 	
-	public int getMathMark() {
-		return markMath ;
+	public Mark() {
+		
+		this.midTerm = 60;
+		this.finalMark = 70;
+	}
+	
+
+
+	public double getMidMark() {
+		return midTerm ;
 	}
 
-	public void setMathMark(int mark) {
-		this.markMath  = mark;
+	public void setMidMark(double midMark) {
+		this.midTerm  = midMark;
 	}
 
-	public int getPhysics() {
-		return physics;
+	public double getFinal() {
+		return finalMark;
 	}
 
-	public void setPhysics(int physics) {
-		this.physics = physics;
+	public void setFinal(double finalMark) {
+		this.finalMark = finalMark;
 	}
 	
 }

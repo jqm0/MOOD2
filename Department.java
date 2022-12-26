@@ -9,6 +9,13 @@ public class Department {
 	Teacher teacher1 = new Teacher();
 	ArrayList<Teacher> teacherList = new ArrayList<Teacher>();
 
+	public Department() {
+	
+		this.name = "Computer Science";
+		this.Size = 20;
+		this.location = "North";
+	}
+
 	public String getName() {
 		return name;
 	}

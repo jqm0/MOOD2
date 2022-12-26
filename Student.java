@@ -8,6 +8,8 @@ public class Student {
 	Course course1 = new Course();
 	ArrayList<Course> courseList = new ArrayList<Course>();
 
+	
+
 	public int getId() {
 		return id;
 	}
