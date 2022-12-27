@@ -1,5 +1,9 @@
 package firstTask;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Stack;
@@ -17,14 +21,18 @@ public class Tester {
 		Scanner sc = new Scanner(System.in);
 		School school1 = new School();
 		
+		
+		
 		while(o) {
 		System.out.println("please select one of option");
 		System.out.println("1 - Do object chaining ");
-		System.out.println("2 - Display History ");
-		System.out.println("3 - Exit ");
+		System.out.println("2 - Write history in txt file ");
+		System.out.println("3 - Display history from txt file ");
+		System.out.println("4 - Exit ");
 		int firstOption = sc.nextInt();
 		if( firstOption == 1) {
 		
+			
 			System.out.println("welcome to object chaining system");
 			System.out.print("Please Enter School Name : ");
 			String schoolName = sc.next();
@@ -83,11 +91,7 @@ public class Tester {
 							if (sc.nextInt() != 1) {
 								option4 = false;
 	 
-							}
-
-							
-							
-							
+							}	
 						}
 
 						t.studentList.add(st);
@@ -157,27 +161,50 @@ public class Tester {
 					System.out.println("=========== Thank You :) ============");
 
 				}
-
-				
-				
-				
-				
-				
 				
 				
 			}
 		}
-		else if (firstOption == 2){
+		
+		else if (firstOption == 2) {
+			File f = new File("C:\\Users\\Lenovo\\Documents\\GitHub\\Mood\\firstTask\\src\\firstTask\\newfile.txt");
+			try {
+				FileWriter fw = new FileWriter(f);
+			
+				for(String s : stackHistory) {
+					fw.write(" --- ");
+					fw.write(s);
+				}
+				fw.close();
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		else if (firstOption == 3){
 			System.out.println("============== History ==============");
 			System.out.println(">>>>>>>>>>> School Details <<<<<<<<<");
-			for(String s : stackHistory) {
-				System.out.println("---------------------------------");
-				System.out.println(s);
-			}	
+			System.out.println("");
+			File file = new File("C:\\Users\\Lenovo\\Documents\\GitHub\\Mood\\firstTask\\src\\firstTask\\newfile.txt");
+			try {
+				Scanner ss = new Scanner(file);
+				while(ss.hasNext()) {
+					System.out.println(ss.nextLine());
+				}
+				ss.close();
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+				
 		}
 		else {
 			o = false;
 		}
+		
 			
 		}
 		

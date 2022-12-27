@@ -24,6 +24,7 @@ public class Mark {
 		return finalMark;
 	}
 
+	
 	public void setFinal(double finalMark) {
 		this.finalMark = finalMark;
 	}
