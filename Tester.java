@@ -165,12 +165,12 @@ public class Tester {
 				
 			}
 		}
-		
+		//2nd option if user want fill data from stack to txt file 
 		else if (firstOption == 2) {
 			File f = new File("C:\\Users\\Lenovo\\Documents\\GitHub\\Mood\\firstTask\\src\\firstTask\\newfile.txt");
 			try {
 				FileWriter fw = new FileWriter(f);
-			
+				
 				for(String s : stackHistory) {
 					fw.write(" --- ");
 					fw.write(s);
@@ -183,6 +183,7 @@ public class Tester {
 			}
 			
 		}
+		// 3rd option if user want to read from txt file
 		else if (firstOption == 3){
 			System.out.println("============== History ==============");
 			System.out.println(">>>>>>>>>>> School Details <<<<<<<<<");
@@ -201,6 +202,7 @@ public class Tester {
 		
 				
 		}
+		//Last option if user want to exit
 		else {
 			o = false;
 		}
