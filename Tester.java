@@ -202,7 +202,7 @@ public class Tester {
 			}
 
 		}
-		//Last option if user want to exit
+		// to search in text file
 		else if (firstOption == 4){
 			System.out.println("============== Search ==============");
 			System.out.println("");
@@ -236,7 +236,7 @@ public class Tester {
 				
 		}
 		
-		
+		//Last option if user want to exit
 		else {
 			o = false;
 		}
