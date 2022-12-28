@@ -28,7 +28,8 @@ public class Tester {
 		System.out.println("1 - Do object chaining ");
 		System.out.println("2 - Write history in txt file ");
 		System.out.println("3 - Display history from txt file ");
-		System.out.println("4 - Exit ");
+		System.out.println("4 - To search for word in txt file ");
+		System.out.println("5 - Exit ");
 		int firstOption = sc.nextInt();
 		if( firstOption == 1) {
 		
@@ -184,11 +185,28 @@ public class Tester {
 			
 		}
 		// 3rd option if user want to read from txt file
-		else if (firstOption == 3){
+		
+		else if(firstOption == 3) {
 			System.out.println("============== History ==============");
-			System.out.println(">>>>>>>>>>> School Details <<<<<<<<<");
 			System.out.println("");
-			System.out.print("Please Enter Word to be searched in file ");
+			File file = new File("C:\\Users\\Lenovo\\Documents\\GitHub\\Mood\\firstTask\\src\\firstTask\\newfile.txt");
+			try {
+				Scanner ss = new Scanner(file);
+				while(ss.hasNext()) {
+					System.out.println(ss.nextLine());
+				}
+				ss.close();
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+		//Last option if user want to exit
+		else if (firstOption == 4){
+			System.out.println("============== Search ==============");
+			System.out.println("");
+			System.out.print("Please Enter Word to be searched in file : ");
 			String input = sc.next();
 			int count = 0 ;
 			File file = new File("C:\\Users\\Lenovo\\Documents\\GitHub\\Mood\\firstTask\\src\\firstTask\\newfile.txt");
@@ -217,8 +235,6 @@ public class Tester {
 		
 				
 		}
-		//Last option if user want to exit
-		
 		
 		
 		else {
