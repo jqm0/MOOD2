@@ -188,12 +188,27 @@ public class Tester {
 			System.out.println("============== History ==============");
 			System.out.println(">>>>>>>>>>> School Details <<<<<<<<<");
 			System.out.println("");
+			System.out.print("Please Enter Word to be searched in file ");
+			String input = sc.next();
+			int count = 0 ;
 			File file = new File("C:\\Users\\Lenovo\\Documents\\GitHub\\Mood\\firstTask\\src\\firstTask\\newfile.txt");
 			try {
+				
 				Scanner ss = new Scanner(file);
 				while(ss.hasNext()) {
-					System.out.println(ss.nextLine());
+					String[] content = ss.nextLine().split(" --- ");
+					for(int i=0 ; i < content.length; i ++) {
+						System.out.println(content[i]);
+						if(input.equalsIgnoreCase(content[i])) {
+							count ++;
+				
+						}
+						
+					}
+					
+					
 				}
+				System.out.println("This word appear in the text file " + count + " times");
 				ss.close();
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
@@ -203,6 +218,9 @@ public class Tester {
 				
 		}
 		//Last option if user want to exit
+		
+		
+		
 		else {
 			o = false;
 		}
