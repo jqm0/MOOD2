@@ -1,5 +1,5 @@
 package firstTask;
-public class School {
+public class School  {
 	private String name;
 	private int id;
 	Department department1 = new Department();

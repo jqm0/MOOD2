@@ -1,8 +1,8 @@
 package firstTask;
 
+import java.io.Serializable;
 
-
-public class Course {
+public class Course implements Serializable {
 	private String name;
 	private String type;
 	Mark markCourse = new Mark();
