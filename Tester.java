@@ -27,7 +27,6 @@ public class Tester {
 		School school1 = new School();
 		try {
 
-			
 			while (o) {
 				System.out.println("please select one of option");
 				System.out.println("1 - Do object chaining ");
